@@ -28,7 +28,7 @@ const Login = () => {
     }
 
     return (
-        <div className="card md:w-1/2 mx-auto my-10 shrink-0 shadow-xl">
+        <div className="card md:w-1/2 mx-auto my-10 shrink-0 shadow-xl bg-orange-400">
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
             <div className="form-control">
                 <label className="label">
@@ -53,7 +53,7 @@ const Login = () => {
                 {/* <PasswordReset /> */}
             </div>
             <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-outline">Login</button>
             </div>
         </form>
         <SocialLogin></SocialLogin>

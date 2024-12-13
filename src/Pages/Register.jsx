@@ -39,7 +39,7 @@ const Register = () => {
             });
     };
     return ( 
-        <div className="card md:w-1/2 mx-auto my-10 shrink-0 shadow-xl">
+        <div className="card md:w-1/2 mx-auto my-10 shrink-0 shadow-xl bg-orange-400">
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
             {/* name */}
             <div className="form-control">
