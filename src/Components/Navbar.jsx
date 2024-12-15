@@ -9,7 +9,7 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100 my-6 max-w-7xl mx-5 md:mx-10 lg:mx-auto ">
+        <div className="navbar bg-base-100 my-6 max-w-7xl mx-0 md:mx-5 lg:mx-auto ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
