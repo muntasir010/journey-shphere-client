@@ -49,7 +49,7 @@ const Destination = () => {
                         <div className="w-full lg:w-[500px] h-60 rounded-xl hover:scale-110" style={{ backgroundImage: "url(https://i.ibb.co/Wfz8XyS/Rectangle-11.png)" }}>
                             <div className="relative top-[calc(50%-24px)] text-2xl font-bold text-center text-[#FF5400] ">Bangladesh</div>
                         </div>
-                        <div className="w-full lg:w-[500px] h-60  rounded-xl hover:scale-110" style={{ backgroundImage: "url(https://ibb.co/KDvNjP0)" }}>
+                        <div className="w-full lg:w-[500px] h-60 rounded-xl hover:scale-110" style={{ backgroundImage: "url(https://i.ibb.co/cvb4YWS/Group-40089.png)" }}>
                             <div className="relative top-[calc(50%-24px)] text-2xl font-bold text-center text-[#FF5400]">Bandarban</div>
                         </div>
                     </div>
