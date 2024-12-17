@@ -7,7 +7,7 @@ const Destination = () => {
             </div>
             <div className="flex flex-col lg:flex-row gap-10">
                 <div
-                    className="hero min-h-screen w-full lg:w-1/3 rounded-xl"
+                    className="hero min-h-screen w-full lg:w-1/2 rounded-xl"
                     style={{
                         backgroundImage: "url(https://i.ibb.co/YLKXMvV/Rectangle-4.png)",
                     }}>
@@ -16,16 +16,14 @@ const Destination = () => {
                         <div className="max-w-md">
                             <h1 className="mb-5 text-5xl font-bold">Up to
                             </h1>
-                            <h1 className="mb-5 text-7xl font-bold">50
-                                %
-                                Off
+                            <h1 className="mb-5 text-7xl font-bold text-[#FF5400]">50 % Off
                             </h1>
                             <h1 className="mb-5 text-5xl font-bold">Winter Collection
                             </h1>
                         </div>
                     </div>
                 </div>
-                <div className="w-full lg:w-2/3 space-y-5">
+                <div className="w-full lg:w-1/2 space-y-5">
                     <div className="flex flex-col md:flex-row justify-between gap-6">
                         <div className="w-full lg:w-[500px] h-60  rounded-xl hover:scale-110" style={{ backgroundImage: "url(https://i.ibb.co/4WQ949h/Rectangle-5.png)" }}>
                             <div className="relative top-[calc(50%-24px)] text-2xl font-bold text-center text-[#FF5400]">Maldives</div>

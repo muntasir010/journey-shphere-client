@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="footer footer-center text-primary-content p-10 mt-10 bg-orange-400">
             <aside>
-                <img className="w-16 rounded-full" src="https://i.ibb.co/Xy1QSWW/5205.jpg" alt="" />
+                <img className="w-16 border-2 border-white rounded-full" src="https://i.ibb.co/Xy1QSWW/5205.jpg" alt="" />
                 <p className="font-bold">
                    Journey Sphere Ltd.
                     <br />

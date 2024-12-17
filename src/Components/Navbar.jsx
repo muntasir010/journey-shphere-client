@@ -7,6 +7,9 @@ const Navbar = () => {
     const image = new Image()
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/allTouristsSpot'>All Tourists Spot</NavLink></li>
+        <li><NavLink to='/addTouristsSpot'>Add Tourists Spot</NavLink></li>
+        <li><NavLink to='/myList'>My List</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100 my-6 max-w-7xl mx-0 md:mx-5 lg:mx-auto ">
