@@ -9,32 +9,33 @@ import AddTouristsSpot from "../Pages/AddTouristsSpot";
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Layouts/>,
-        errorElement: <NotFound/>,
-        children:[
+        element: <Layouts />,
+        errorElement: <NotFound />,
+        children: [
             {
-                path:"/",
-                element: <Home/>
+                path: "/",
+                element: <Home />
             },
             {
                 path: "/login",
-                element: <Login/>
+                element: <Login />
             },
             {
                 path: "/register",
-                element: <Register/>
+                element: <Register />
             },
             {
                 path: "/allTouristsSpot",
-                element: <Register/>
+                element: <Register />
             },
             {
                 path: "/addTouristsSpot",
-                element: <AddTouristsSpot/>
+                element: <AddTouristsSpot />,
+                loader: () => fetch('http://localhost:5000/tourist')
             },
             {
                 path: "/myList",
-                element: <AddTouristsSpot/>
+                element: <AddTouristsSpot />
             }
         ]
     }
