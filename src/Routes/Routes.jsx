@@ -5,6 +5,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Home from "../Pages/Home/Home";
 import AddTouristsSpot from "../Pages/AddTouristsSpot";
+import AllTouristSpot from "../Pages/AllTouristSpot";
 
 export const router = createBrowserRouter([
     {
@@ -26,12 +27,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/allTouristsSpot",
-                element: <Register />
+                element: <AllTouristSpot />,
+                loader: () => fetch('http://localhost:5000/tourist')
             },
             {
                 path: "/addTouristsSpot",
-                element: <AddTouristsSpot />,
-                loader: () => fetch('http://localhost:5000/tourist')
+                element: <AddTouristsSpot />
             },
             {
                 path: "/myList",

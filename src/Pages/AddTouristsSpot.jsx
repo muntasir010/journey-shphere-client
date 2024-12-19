@@ -132,14 +132,6 @@ const AddTouristsSpot = () => {
                 </div>
                 <input type="submit" value="Add Place" className="btn col-span-6" />
             </form>
-            <div>
-                <h3>Tourist place : {tourist.length}</h3>
-                {
-                    tourist.map(tour=><TouristCard tour={tour} key={tour._id}>
-                        
-                    </TouristCard>)
-                }
-            </div>
         </div>
     );
 };
