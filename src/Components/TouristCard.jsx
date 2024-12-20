@@ -56,7 +56,7 @@ const TouristCard = ({ tour }) => {
                     </div>
                     <div className="card-actions justify-center">
                         <Link to='/viewDetails' className="btn btn-outline text-2xl text-orange-400"><FaEye /></Link>
-                        <Link to='/addTouristsSpot/:id' className="btn btn-outline text-2xl text-orange-400"><MdEdit /></Link>
+                        <Link to={`/updatedTouristsSpot/${_id}`} className="btn btn-outline text-2xl text-orange-400"><MdEdit /></Link>
                         <Link onClick={() => handleDelete(_id)} className="btn btn-outline text-2xl text-orange-400"><MdDelete /></Link>
                     </div>
                 </div>
