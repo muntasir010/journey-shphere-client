@@ -55,7 +55,7 @@ const TouristCard = ({ tour }) => {
                         <p className="text-end">Seasonality: {seasonality}</p>
                     </div>
                     <div className="card-actions justify-center">
-                        <Link to='/viewDetails' className="btn btn-outline text-2xl text-orange-400"><FaEye /></Link>
+                        <Link to={`/viewDetails/${_id}`} className="btn btn-outline text-2xl text-orange-400"><FaEye /></Link>
                         <Link to={`/updatedTouristsSpot/${_id}`} className="btn btn-outline text-2xl text-orange-400"><MdEdit /></Link>
                         <Link onClick={() => handleDelete(_id)} className="btn btn-outline text-2xl text-orange-400"><MdDelete /></Link>
                     </div>
