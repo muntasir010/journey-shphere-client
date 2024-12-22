@@ -12,7 +12,17 @@ const ViewDetails = () => {
                         <a rel="noopener noreferrer" href="#" className="inline-block text-2xl font-semibold text-orange-400 sm:text-3xl">{name}</a>
                         
                     </div>
-                    <div className="dark:text-gray-800">
+                    <div>
+                        <h4 className="text-lg font-semibold text-orange-400">Country: <span className="text-black">{country}</span></h4>
+                        <h4 className="text-lg font-semibold text-orange-400">Location: <span className="text-black">{location}</span></h4>
+                        <h4 className="text-lg font-semibold text-orange-400">Cost: <span className="text-black">{cost}</span></h4>
+                        <h4 className="text-lg font-semibold text-orange-400">Seasonality: <span className="text-black">{seasonality}</span></h4>
+                        <h4 className="text-lg font-semibold text-orange-400">Total Visitor Per Year: <span className="text-black">{totalVisitorsPerYear}</span></h4>
+                        <h4 className="text-lg font-semibold text-orange-400">Travel Time: <span className="text-black">{time}</span></h4>
+                    </div>
+                    <div className="dark:text-gray-800 text-lg">
+                        <h2 className="font-semibold">All you need to know about {name}:
+                        </h2>
                         <p>{description}</p>
                     </div>
                 </div>
