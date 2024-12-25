@@ -3,33 +3,39 @@ import { useLoaderData } from "react-router-dom";
 
 const DestinationForYou = () => {
     const destination = useLoaderData();
-    console.log(destination)
-    const [appliedDestination, setAppliedDestination] = useState([]);
-    const [destinations, setDestinations] = useState("bangladesh");
+    const [selectedCountry, setSelectedCountry] = useState("Bangladesh");
 
-    // const handleDestinationsFilter = filter => {
-    //     if (filter === 'bangladesh') {
-    //         setDestinations(destinations);
-    //     }
-    //     else if (filter === 'indonesia') {
-    //         const IndDestination = destinations.filter(des => des.country === 'bangladesh');
-    //         setDestinations(IndDestination);
-    //     }
-    //     else if (filter === 'thailand') {
-    //         const ThaDestination = destinations.filter(des => des.country === '');
-    //         setDestinations(ThaDestination);
-    //     }
-    // }
+
+    let filteredData = [];
+
+    const handleFilterCountry = () => {
+        if (selectedCountry === "Bangladesh") {
+            filteredData = destination.filter((item) => item.country === "Bangladesh");
+        } else if (selectedCountry === "Vietnam") {
+            filteredData = destination.filter((item) => item.country === "Vietnam");
+        } else if (selectedCountry === "Indonesia") {
+            filteredData = destination.filter((item) => item.country === "Indonesia");
+        } else if (selectedCountry === "Cambodia") {
+            filteredData = destination.filter((item) => item.country === "Cambodia");
+        } else if (selectedCountry === "Malaysia") {
+            filteredData = destination.filter((item) => item.country === "Malaysia");
+        }
+        else if (selectedCountry === "Thailand") {
+            filteredData = destination.filter((item) => item.country === "Thailand");
+        }
+        console.log(selectedCountry)
+    }
+
     return (
         <div>
             <h2 className="text-4xl font-bold text-orange-400 text-center my-8">Destinations for you</h2>
             <div className="bg-orange-400 rounded-xl max-w-2xl mx-auto relative grid grid-cols-3 md:grid-cols-6 items-center justify-between p-4 gap-4 mb-8">
-                <button onClick={() => { handleDestinationsFilter('bangladesh') }} className="btn">Bangladesh</button>
-                <button onClick={() => { handleDestinationsFilter('indonesia') }} className="btn">Indonesia</button>
-                <button onClick={() => { handleDestinationsFilter('indonesia') }} className="btn">Vietnam</button>
-                <button onClick={() => { handleDestinationsFilter('indonesia') }} className="btn">Cambodia</button>
-                <button onClick={() => { handleDestinationsFilter('indonesia') }} className="btn">Malaysia</button>
-                <button onClick={() => { handleDestinationsFilter('indonesia') }} className="btn">Thailand</button>
+                <button onClick={() => handleFilterCountry("Bangladesh")} className="btn">Bangladesh</button>
+                <button onClick={() => handleFilterCountry('Vietnam')} className="btn">Vietnam</button>
+                <button onClick={() => handleFilterCountry('Indonesia')} className="btn">Indonesia</button>
+                <button onClick={() => handleFilterCountry('Cambodia')} className="btn">Cambodia</button>
+                <button onClick={() => handleFilterCountry('Malaysia')} className="btn">Malaysia</button>
+                <button onClick={() => handleFilterCountry('Thailand')} className="btn">Thailand</button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {

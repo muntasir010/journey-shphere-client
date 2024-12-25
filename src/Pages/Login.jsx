@@ -21,6 +21,20 @@ const Login = () => {
         const { email, password } = data;
         signInUser(email, password)
             .then(result => {
+                console.log(result)
+                const user = {
+                    email, lastLoggedAt: result.user?.metadata?.lastSignInTime
+                }
+                fetch('http://localhost:5000/user',{
+                    method: 'PATCH',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
+                .catch(error => {
+                    console.log(error)
+                })
                 if (result.user) {
                     navigate(from)
                 }

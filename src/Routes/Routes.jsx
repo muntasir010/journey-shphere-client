@@ -9,6 +9,7 @@ import AllTouristSpot from "../Pages/AllTouristSpot";
 import UpdateTouristSpot from "../Pages/UpdateTouristSpot";
 import ViewDetails from "../Pages/ViewDetails";
 import DestinationForYou from "../Pages/Home/DestinationForYou";
+import MyList from "../Pages/MyList";
 
 export const router = createBrowserRouter([
     {
@@ -55,7 +56,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/myList",
-                element: <AddTouristsSpot />
+                element: <MyList/>,
+                loader: () => fetch ('http://localhost:5000/tourist/')
             }
         ]
     }

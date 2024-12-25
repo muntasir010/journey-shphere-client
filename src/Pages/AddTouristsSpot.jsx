@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
-import TouristCard from "../Components/TouristCard";
+import { saveDestination } from "../utility/localStorage";
 
 const AddTouristsSpot = () => {
     const tourist = useLoaderData();
