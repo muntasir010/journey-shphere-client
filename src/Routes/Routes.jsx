@@ -10,6 +10,7 @@ import UpdateTouristSpot from "../Pages/UpdateTouristSpot";
 import ViewDetails from "../Pages/ViewDetails";
 import DestinationForYou from "../Pages/Home/DestinationForYou";
 import MyList from "../Pages/MyList";
+import PrivateRoute from "../Pages/PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -37,27 +38,35 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/addTouristsSpot",
-                element: <AddTouristsSpot />
+                element: <PrivateRoute>
+                    <AddTouristsSpot />
+                </PrivateRoute>
             },
             {
                 path: "/updatedTouristsSpot/:id",
-                element: <UpdateTouristSpot />,
+                element: <PrivateRoute>
+                    <UpdateTouristSpot />
+                </PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/tourist/${params.id}`)
             },
             {
                 path: "/viewDetails/:id",
-                element: <ViewDetails />,
+                element: <PrivateRoute>
+                    <ViewDetails />
+                </PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/tourist/${params.id}`)
             },
             {
                 path: "/destinations",
-                element: <DestinationForYou/>,
+                element: <DestinationForYou />,
                 loader: () => fetch('http://localhost:5000/tourist/')
             },
             {
                 path: "/myList",
-                element: <MyList/>,
-                loader: () => fetch ('http://localhost:5000/tourist/')
+                element: <PrivateRoute>
+                    <MyList />
+                </PrivateRoute>,
+                loader: () => fetch('http://localhost:5000/tourist/')
             }
         ]
     }
