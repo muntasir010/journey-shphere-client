@@ -4,7 +4,6 @@ import { useContext } from "react";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    const image = new Image()
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/allTouristsSpot'>All Tourists Spot</NavLink></li>
@@ -12,7 +11,7 @@ const Navbar = () => {
         <li><NavLink to='/myList'>My List</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100 my-6 max-w-7xl mx-0 md:mx-5 lg:mx-auto ">
+        <div className="navbar bg-white max-w-7xl mx-0 md:mx-5 lg:mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -72,12 +71,7 @@ const Navbar = () => {
                             <button className="btn btn-sm  btn-ghost bg-orange-400">Login</button>
                         </Link>
                 }
-                {/* {
-                    user? <p>logOut</p>
-                    :
-                    <p>Login</p>
-                } */}
-            </div>
+                </div>
         </div>
     );
 };

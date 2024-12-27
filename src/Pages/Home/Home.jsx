@@ -5,13 +5,13 @@ import DestinationForYou from "./DestinationForYou";
 
 const Home = () => {
     return (
-        <div className="">
+        <div>
             <Banner />
-            <AllTouristSpot/>
-            <DestinationForYou/>
-            <Destination/>
+            <AllTouristSpot />
+            <DestinationForYou />
+            <Destination />
         </div>
     );
 };
 
-export default Home;
+export default Home

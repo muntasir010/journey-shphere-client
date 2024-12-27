@@ -1,4 +1,6 @@
-# React + Vite
+# Journey Sphere
+# https://simple-firebase-23028.web.app/
+# React hook form
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
