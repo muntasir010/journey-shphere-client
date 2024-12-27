@@ -25,7 +25,7 @@ const Login = () => {
                 const user = {
                     email, lastLoggedAt: result.user?.metadata?.lastSignInTime
                 }
-                fetch('http://localhost:5000/user',{
+                fetch('https://journey-shphere-server-production.up.railway.app/user',{
                     method: 'PATCH',
                     headers: {
                         'content-type': 'application/json'

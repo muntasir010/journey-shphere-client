@@ -22,7 +22,7 @@ const Register = () => {
                 console.log(result)
                 const createdAt = result.user?.metadata?.creationTime;
                 const user = {email, createdAt: createdAt};
-                fetch('http://localhost:5000/user', {
+                fetch('https://journey-shphere-server-production.up.railway.app/user', {
                     method: 'POST',
                     headers: {
                         'content-type' : 'application/json'

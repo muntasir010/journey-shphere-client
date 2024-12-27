@@ -18,7 +18,7 @@ const TouristCard = ({ tour }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/tourist/${_id}`, {
+                fetch(`https://journey-shphere-server-production.up.railway.app/tourist/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())

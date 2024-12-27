@@ -24,7 +24,7 @@ const UpdateTouristSpot = () => {
         const updatePlace = { name, country, location, description, cost, seasonality, time, totalVisitorsPerYear, email, userName, photo }
         console.log(updatePlace)
 
-        fetch(`http://localhost:5000/tourist/${_id}`, {
+        fetch(`https://journey-shphere-server-production.up.railway.app/tourist/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

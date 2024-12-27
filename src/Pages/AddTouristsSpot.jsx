@@ -23,7 +23,7 @@ const AddTouristsSpot = () => {
         const newPlace = {name, country, location, description, cost, seasonality, time, totalVisitorsPerYear, email, userName, photo}
         console.log(newPlace)
 
-        fetch('http://localhost:5000/tourist',{
+        fetch('https://journey-shphere-server-production.up.railway.app/tourist',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

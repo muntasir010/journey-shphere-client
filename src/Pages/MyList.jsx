@@ -9,13 +9,19 @@ const MyList = () => {
     const lists = useLoaderData();
     const [myList, setMyList] = useState([]);
     // const {_id} = lists;
-    useEffect(() =>{
-        const storedCountryIds = getStoredDestination();
-        if(lists.length > 0){
-            const addPlace = lists.filter(lis => storedCountryIds.includes(lis._id))
-            setMyList(addPlace)
-        }
-    },[])
+    // useEffect(() =>{
+    //     const storedCountryIds = getStoredDestination();
+    //     if(lists.length > 0){
+    //         const addPlace = lists.filter(lis => storedCountryIds.includes(lis._id))
+    //         setMyList(addPlace)
+    //     }
+    // },[])
+    useEffect(() => {
+        const storedAllCards = JSON.parse(localStorage.getItem("allCards")) || [];
+        const storedMyList = JSON.parse(localStorage.getItem("myList")) || [];
+        setAllCards(storedAllCards);
+        setMyList(storedMyList);
+    }, []);
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-6">
             {

@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
-                loader: () => fetch('http://localhost:5000/tourist')
+                loader: () => fetch('https://journey-shphere-server-production.up.railway.app/tourist')
             },
             {
                 path: "/login",
@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
             {
                 path: "/allTouristsSpot",
                 element: <AllTouristSpot />,
-                loader: () => fetch('http://localhost:5000/tourist')
+                loader: () => fetch('https://journey-shphere-server-production.up.railway.app/tourist')
             },
             {
                 path: "/addTouristsSpot",
@@ -47,26 +47,26 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <UpdateTouristSpot />
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/tourist/${params.id}`)
+                loader: ({ params }) => fetch(`https://journey-shphere-server-production.up.railway.app/tourist/${params.id}`)
             },
             {
                 path: "/viewDetails/:id",
                 element: <PrivateRoute>
                     <ViewDetails />
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/tourist/${params.id}`)
+                loader: ({ params }) => fetch(`https://journey-shphere-server-production.up.railway.app/tourist/${params.id}`)
             },
             {
                 path: "/destinations",
                 element: <DestinationForYou />,
-                loader: () => fetch('http://localhost:5000/tourist/')
+                loader: () => fetch('https://journey-shphere-server-production.up.railway.app/tourist/')
             },
             {
                 path: "/myList",
                 element: <PrivateRoute>
                     <MyList />
                 </PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/tourist/')
+                loader: () => fetch('https://journey-shphere-server-production.up.railway.app/tourist/')
             }
         ]
     }
